@@ -1,14 +1,14 @@
 function partial(add, a){
-    return function (b, c) {
-        return add(a, b, c);
+    return function (b) {
+        return add(a, b);
     }
 }
 
-function add(a, b, c) {
-    return a + b + c;
+function add(a, b) {
+    return a + b;
 }
 
 const addFive = partial(add, 5);
 
-console.log(addFive(10, 10));
-console.log(addFive(15, 15));
+console.log(addFive(10));
+console.log(addFive(15));
